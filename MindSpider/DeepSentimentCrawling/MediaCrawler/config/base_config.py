@@ -28,7 +28,7 @@ IP_PROXY_PROVIDER_NAME = "kuaidaili"  # kuaidaili | wandouhttp
 # 设置False会打开一个浏览器
 # 小红书如果一直扫码登录不通过，打开浏览器手动过一下滑动验证码
 # 抖音如果一直提示失败，打开浏览器看下是否扫码登录之后出现了手机号验证，如果出现了手动过一下再试。
-HEADLESS = True
+HEADLESS = False  # 首次登录需要看到浏览器窗口扫码
 
 # 是否保存登录状态
 SAVE_LOGIN_STATE = True
@@ -106,6 +106,10 @@ FONT_PATH = "./docs/STZHONGS.TTF"
 
 # 爬取间隔时间
 CRAWLER_MAX_SLEEP_SEC = 2
+
+# 时间过滤配置
+# 只爬取最近N天内的帖子，设置为0表示不过滤
+CRAWLER_MAX_DAYS = 1  # 只爬取7天内的帖子
 
 from .bilibili_config import *
 from .xhs_config import *

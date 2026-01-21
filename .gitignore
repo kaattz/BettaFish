@@ -154,13 +154,7 @@ ehthumbs.db
 Desktop.ini
 
 # ==== 大型模型文件 ====
-# 预训练模型目录
-# models/
-# */models/
-# */*/models/
-
 # PyTorch 模型文件
-# *.pth
 *.pt
 *.bin
 *.ckpt
@@ -206,26 +200,10 @@ checkpoints/
 *.rar
 *.7z
 
-# CSV 数据文件 (大型)
-# ChineseNlpCorpus/datasets/*/*.csv
-# */weibo_senti_100k.csv
-# */ChnSentiCorp_htl_all.csv
-# */waimai_10k.csv
-
 # 其他数据文件
-# *.pkl
-# *.pickle
 *.json.gz
 *.jsonl
 *.parquet
-
-# 数据集目录
-# data/
-# */data/
-# dataset/
-# */dataset/
-# datasets/raw/
-# datasets/processed/
 
 # ==== MediaCrawler 相关 ====
 # 临时图片和媒体文件
@@ -243,39 +221,17 @@ output/
 node_modules/
 *.tgz
 
-# 数据库文件
-# *.db
-# *.sqlite
-# *.sqlite3
-# subtitle_db
-
 # ==== UI 和 Web 相关 ====
 # 前端构建文件
 dist/
 build/
 public/build/
 
-# 图片和媒体文件 (大型)
-# *.png
-# *.jpg
-# *.jpeg
-# *.gif
-# *.bmp
-# *.ico
-# *.svg
-# !docs/static/images/*.png
-# !docs/static/images/*.jpg
-# !docs/static/images/*.jpeg
-# !UIexample/*.png
-
 # VitePress 缓存
 docs/.vitepress/cache
 
 # ==== 日志和临时文件 ====
-# 日志文件
-# *.log
 logs/
-# */logs/
 
 # 临时文件
 temp/
@@ -287,7 +243,6 @@ tmp/
 *~
 
 # ==== 配置和密钥 ====
-# 敏感配置文件
 /config.py
 config.ini
 secrets.json
@@ -303,7 +258,6 @@ api_keys.txt
 credentials.json
 
 # ==== 其他项目特定文件 ====
-# 词云生成的临时文件
 wordcloud_temp/
 *.ttf
 
@@ -325,14 +279,9 @@ test_results/
 ~$*
 
 # ==== 版本控制 ====
-# Git
 .git/
 *.orig
-
-# SVN
 .svn/
-
-# Mercurial
 .hg/
 
 .cursor/
@@ -345,3 +294,10 @@ media_engine_streamlit_reports/
 query_engine_streamlit_reports/
 final_reports/
 forward_prs.sh
+
+# PostgreSQL 数据目录
+db_data/
+
+# 爬虫调试目录
+debug/
+*/debug/

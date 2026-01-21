@@ -432,3 +432,59 @@ class ZhihuCreator(Base):
     get_voteup_count = Column(Integer, default=0)
     add_ts = Column(BigInteger)
     last_modify_ts = Column(BigInteger)
+
+class GubaNote(Base):
+    __tablename__ = 'guba_note'
+    id = Column(Integer, primary_key=True)
+    note_id = Column(String(255), index=True)
+    title = Column(Text)
+    content = Column(Text)
+    note_url = Column(Text)
+    publish_time = Column(String(255), index=True)
+    user_nickname = Column(Text, default='')
+    user_link = Column(Text, default='')
+    read_count = Column(Integer, default=0)
+    comment_count = Column(Integer, default=0)
+    source_keyword = Column(Text, default='')
+    add_ts = Column(BigInteger)
+    last_modify_ts = Column(BigInteger)
+
+class GubaComment(Base):
+    __tablename__ = 'guba_comment'
+    id = Column(Integer, primary_key=True)
+    comment_id = Column(String(255), index=True)
+    content = Column(Text)
+    publish_time = Column(String(255), index=True)
+    user_nickname = Column(Text, default='')
+    note_id = Column(String(255), index=True)
+    note_url = Column(Text)
+    add_ts = Column(BigInteger)
+    last_modify_ts = Column(BigInteger)
+
+class XueqiuNote(Base):
+    __tablename__ = 'xueqiu_note'
+    id = Column(Integer, primary_key=True)
+    note_id = Column(String(255), index=True)
+    title = Column(Text)
+    content = Column(Text)
+    note_url = Column(Text)
+    publish_time = Column(String(255), index=True)
+    user_nickname = Column(Text, default='')
+    user_link = Column(Text, default='')
+    read_count = Column(Integer, default=0)
+    comment_count = Column(Integer, default=0)
+    source_keyword = Column(Text, default='')
+    add_ts = Column(BigInteger)
+    last_modify_ts = Column(BigInteger)
+
+class XueqiuComment(Base):
+    __tablename__ = 'xueqiu_comment'
+    id = Column(Integer, primary_key=True)
+    comment_id = Column(String(255), index=True)
+    content = Column(Text)
+    publish_time = Column(String(255), index=True)
+    user_nickname = Column(Text, default='')
+    note_id = Column(String(255), index=True)
+    note_url = Column(Text)
+    add_ts = Column(BigInteger)
+    last_modify_ts = Column(BigInteger)
